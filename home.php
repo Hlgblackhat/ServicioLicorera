@@ -6,9 +6,9 @@
   </head>
   <body>
     <h1>Bienvenido</h1>
-
-
-
+    <br>
+    <br>
+    <a href="index.php">Salir</a>
 
   </body>
 </html>
