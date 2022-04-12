@@ -1,25 +1,34 @@
-<?php
-$usuario=$_POST['usuario'];
-$contraseña=$_POST['contraseña'];
-session_start();
-$_SESSION['usuario']=$usuario;
+<html lang="es" dir="ltr">
+  <body>
+    <?php
 
-$conexion=mysqli_connect("localhost", "Haider", "admin", "licorera");
+    $usuario=$_POST['usuario'];
+    $contraseña=$_POST['contraseña'];
 
-$consulta="SELECT*FROM adminuser where adminuser.usuario='$usuario' and adminuser.contraseña='$contraseña'";
-$resultado=mysqli_query($conexion, $consulta);
 
-$filas=mysqli_num_rows($resultado);
+    session_start();
+    $_SESSION['usuario']=$usuario;
 
-if($filas){
-  header("location:home.php");
-}else{
-  ?>
-  <?php
-  include("index.php");
-  ?>
-  <h1 class="bad">ERROR EN LA AUTENTIFICACION</h1>
-  <?php
-}
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+
+    include("parametrosDB.php");
+
+
+    $consulta="SELECT*FROM usuarios where usuarios.usser='$usuario' and usuarios.password='$contraseña' and usuarios.id_rol='2'";
+
+    $resultado=mysqli_query($conexion, $consulta);
+
+    $filas=mysqli_num_rows($resultado);
+
+    if($filas){
+      header("location:home.php");
+    }else{
+      include("index.php");
+      ?>
+    <center><h1><?php echo"ERROR EN LA AUTENTIFICACION".$conexion->error;
+    }
+
+    $conexion->close();
+    ?></h1>
+    </center>
+  </body>
+</html>
