@@ -12,6 +12,7 @@
         <br><br>
         <a href="salir.php">Cerrar Session</a>
         </center>
+        
 
     </body>
 </html>
