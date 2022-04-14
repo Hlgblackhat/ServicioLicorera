@@ -5,10 +5,10 @@
     <title>home</title>
   </head>
   <body>
-    <h1>Bienvenido</h1>
+    <h1>Bienvenido a Licores Cismar</h1>
     <br>
     <br>
-    <a href="index.php">Salir</a>
+    <a href="salir.php">Cerrar Session</a>
 
   </body>
 </html>
