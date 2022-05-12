@@ -20,7 +20,8 @@ if ($resultado->num_rows > 0) {
     echo "<div align=\"center\">\n";
     echo "<table border=2>\n";
     echo "<tr BGCOLOR=\"#D3D3D3\">\n";
-    echo "<td>id_product</td>\n";
+    echo "<td>id</td>\n";
+    echo "<td>idproduct</td>\n";
     echo "<td>nombre</td>\n";
     echo "<td>descripcion</td>\n";
     echo "<td>precio</td>\n";
@@ -35,8 +36,8 @@ if ($resultado->num_rows > 0) {
         else{
           echo "<tr>\n";
       	}
-        echo "<td>".$row["id_product"]."</td>\n<td>".$row["nombre"]."</td>\n<td>".$row["descripcion"]."</td>\n<td>".$row["precio"]."</
-        td>\n<td><a href=\"delete_producto.php?id=".$row["id_product"]."\">Delete</td><td><a href=\"update_producto.php?id=".$row["id_product"]."\">Update</td>\n";
+        echo "<td>".$row["id"]."</td>\n<td>".$row["idproduct"]."</td>\n<td>".$row["nombre"]."</td>\n<td>".$row["descripcion"]."</td>\n<td>".$row["precio"]."</
+        td>\n<td><a href=\"delete_producto.php?id=".$row["id"]."\">Delete</td><td><a href=\"update_producto.php?id=".$row["id"]."\">Update</td>\n";
         echo "</tr>\n";
         $fila=$fila+1;
     }
@@ -58,5 +59,5 @@ $conexion->close();
  <br><br>
  <a href="home_admin.php">Volver</a>
  <br><br>
- <a href="salir.php">Cerrar Session</a>
+ <a href="salir.php">Cerrar Sesión</a>
  </center>
