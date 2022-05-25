@@ -38,7 +38,9 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `idproduct` varchar(20) CHARACTER SET latin1 NOT NULL,
   `nombre` varchar(255) CHARACTER SET latin1 NOT NULL,
   `descripcion` varchar(500) CHARACTER SET latin1 NOT NULL,
-  `precio` int(11) NOT NULL,
+  `cantidad` int(120) NOT NULL,
+  `precio_uni` int(11) NOT NULL,
+  `precio_total` int(20) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `UNIQUE` (`idproduct`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
